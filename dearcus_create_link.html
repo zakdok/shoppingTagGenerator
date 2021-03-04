@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dearcus 링크 생성기</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="create-link-area">
+            <div class="input-list-area">
+                <ul class="list-wrap">
+                    <li class="list-con">
+                        <div class="list-inner">
+                            <div class="input-wrap">
+                                <input type="text" placeholder="링크" name="link">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-con">
+                        <div class="list-inner">
+                            <div class="input-wrap">
+                                <input type="text" placeholder="left, 절대값" name="leftPosition">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-con">
+                        <div class="list-inner">
+                            <div class="input-wrap">
+                                <input type="text" placeholder="top, 절대값" name="topPosition">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-con">
+                        <div class="list-inner">
+                            <div class="input-wrap">
+                                <input type="text" placeholder="타이틀" name="title">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-con">
+                        <div class="list-inner">
+                            <div class="input-wrap">
+                                <input type="text" placeholder="내용" name="text">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="submit-btn-area">
+                <div class="btn-wrap">
+                    <button class="submit" onClick="onSubmit()">생성</button>
+                </div>
+            </div>
+        </div>
+        <div class="link-output-area">
+            <div class="copy-text-area">
+                <div class="text-wrap">
+                    <p class="text">test2</p>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btn" onClick="copyText()">copy text</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
