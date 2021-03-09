@@ -5,16 +5,18 @@
     color: #1b1b1b;
 }
 .create-link-area{}
-.create-link-area .input-list-area{}
-.create-link-area .input-list-area .list-wrap{
+.create-link-area .link-wrap{
     margin: -20px 0 0;
 }
+.create-link-area .input-list-area{}
+.create-link-area .input-list-area .list-wrap{}
 .create-link-area .input-list-area .list-wrap .list-con{
     padding: 20px 0 0;
 }
 .create-link-area .input-list-area .list-wrap .list-inner{}
 .create-link-area .input-list-area .list-wrap .input-wrap{}
-.create-link-area .input-list-area .list-wrap .input-wrap input{
+.create-link-area .input-list-area .list-wrap .input-wrap input,
+.create-link-area .input-list-area .list-wrap .input-wrap select{
     width: 100%;
     height: 40px;
     line-height: 38px;
@@ -23,14 +25,53 @@
     font-size: 16px;
     font-weight: 400;
 }
-.create-link-area .input-list-area .list-wrap .input-wrap textarea{
-    width: 100%;
-    height: 80px;
-    line-height: 1.4;
-    padding: 10px;
-    border: 1px solid #d9d9d9;
-    font-size: 16px;
+.create-link-area .input-list-area .list-wrap .input-wrap .delete-wrap.show{
+    position: relative;
+    padding: 0 50px 0 0;
+}
+.create-link-area .input-list-area .list-wrap .input-wrap .delete-wrap .delete{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: red;
+    padding: 0;
+    transition: .25s;
+    color: #fff;
+    line-height: 40px;
+    font-size: 32px;
     font-weight: 400;
+}
+.create-link-area .input-list-area .list-wrap .input-wrap .delete-wrap.show .delete{
+    display: block;
+}
+.create-link-area .input-list-area .list-wrap .input-wrap .delete-wrap .delete:hover{
+    background-color: orange;
+}
+.create-link-area .plus-btn-area{
+    padding: 10px 0 0;
+}
+.create-link-area .plus-btn-area .btn-wrap{}
+.create-link-area .plus-btn-area .btn-wrap .plus{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #8FCBDD;
+    padding: 0;
+    transition: .25s;
+    color: #fff;
+    line-height: 40px;
+    font-size: 32px;
+    font-weight: 400;
+}
+.create-link-area .plus-btn-area .btn-wrap .plus:hover{
+    background-color: #333;
 }
 .create-link-area .submit-btn-area{
     padding: 20px 0 0;

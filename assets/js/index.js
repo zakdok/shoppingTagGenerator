@@ -1,35 +1,50 @@
-const onSubmit = () => {
-    const inputElements = document.querySelectorAll('.create-link-area .input-list-area .list-wrap .input-wrap input');
-    let linkText = '';
-    let inputArray = [];
-    let outputArray = [];
-    inputElements.forEach((input, idx) => {
-        let inputValue = input.value;
-        const inputName = input.name;
-        const width = 800;
-        inputArray = inputValue.split(',');
+const onAddFormList = () => {
+    const listWrapper = document.querySelector('.create-link-area .link-wrap');
+    const listContainer = listWrapper.querySelector('.input-list-area');
+    const copyList = listContainer.cloneNode(true);
+    listWrapper.appendChild(copyList);
 
-        inputArray.forEach((array, idx) => {
-            if(inputName === 'link'){
-                outputArray[idx] += inputArray[idx] + '?';
-            } else if (inputName === 'leftPosition') {
-                const sum = inputArray[idx] / width * 100;
-                outputArray[idx] += sum.toFixed(2) + '%?';
-            } else if (inputName === 'topPosition') {
-                const sum = inputArray[idx] / width * 100;
-                outputArray[idx] += sum.toFixed(2) + '%?';
-            } else if (inputName === 'title') {
-                outputArray[idx] += '<h3>' + inputArray[idx] + '</h3>';
-            } else if (inputName === 'text') {
-                outputArray[idx] += inputArray[idx].replace(/(?:\r\n|\r|\n)/g, '<br />');
-            }
-        })
-    })
-    outputArray.forEach((array, idx) => {
-        if(idx !== outputArray.length - 1){
-            linkText += outputArray[idx].replace('undefined', '') + '`';
-        } else {
-            linkText += outputArray[idx].replace('undefined', '')
+    const deleteBtn = listWrapper.children[listWrapper.children.length - 1].querySelector('.delete');
+    deleteBtn.closest('.delete-wrap').classList.add('show');
+    deleteBtn.addEventListener('click', () => {
+        deleteBtn.closest('.input-list-area').remove();
+    });
+}
+
+const onSubmit = () => {
+    const formLists = document.querySelectorAll('.create-link-area .link-wrap .input-list-area');
+    let linkText = '';
+    formLists.forEach((list, idx) => {
+        const left = list.querySelector('input[name="left"]').value;
+        const top = list.querySelector('input[name="top"]').value;
+        const imageWidth = 800;
+
+        const leftSum = left / imageWidth * 100;
+        const topSum = left / imageWidth * 100;
+
+        if (idx > 0) {
+            linkText += '`';
+        }
+
+        const productType = list.querySelector('select[name="product"]').value;
+
+        let url;
+        let title;
+        let text;
+
+        switch (productType){
+            case '1' : 
+                url = "https://naver.com";
+                title = "네이버";
+                text = "네이버 <br />설명";
+                linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
+            break;
+            case '2' : 
+                url = "https://daum.com";
+                title = "다음";
+                text = "다음 <br />설명";
+                linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
+            break;
         }
     })
     const outputElements = document.querySelector('.link-output-area .copy-text-area .text-wrap .text');

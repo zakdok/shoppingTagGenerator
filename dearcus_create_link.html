@@ -11,44 +11,50 @@
 <body>
     <div id="app">
         <div class="create-link-area">
-            <div class="input-list-area">
-                <ul class="list-wrap">
-                    <li class="list-con">
-                        <div class="list-inner">
-                            <div class="input-wrap">
-                                <input type="text" placeholder="링크" name="link">
+            <div class="link-wrap">
+                <div class="input-list-area">
+                    <ul class="list-wrap">
+                        <li class="list-con">
+                            <div class="list-inner">
+                                <div class="input-wrap">
+                                    <div class="delete-wrap">
+                                        <select name="product">
+                                            <option value="1">상품1</option>
+                                            <option value="2">상품2</option>
+                                            <option value="3">상품3</option>
+                                            <option value="4">상품4</option>
+                                            <option value="5">상품5</option>
+                                            <option value="6">상품6</option>
+                                            <option value="7">상품7</option>
+                                            <option value="8">상품8</option>
+                                            <option value="9">상품9</option>
+                                        </select>
+                                        <button class="delete">-</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="list-con">
-                        <div class="list-inner">
-                            <div class="input-wrap">
-                                <input type="text" placeholder="left, 절대값" name="leftPosition">
+                        </li>
+                        <li class="list-con">
+                            <div class="list-inner">
+                                <div class="input-wrap">
+                                    <input type="text" placeholder="left, 절대값" name="left">
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="list-con">
-                        <div class="list-inner">
-                            <div class="input-wrap">
-                                <input type="text" placeholder="top, 절대값" name="topPosition">
+                        </li>
+                        <li class="list-con">
+                            <div class="list-inner">
+                                <div class="input-wrap">
+                                    <input type="text" placeholder="top, 절대값" name="top">
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="list-con">
-                        <div class="list-inner">
-                            <div class="input-wrap">
-                                <input type="text" placeholder="타이틀" name="title">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-con">
-                        <div class="list-inner">
-                            <div class="input-wrap">
-                                <input type="text" placeholder="내용" name="text">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="plus-btn-area">
+                <div class="btn-wrap">
+                    <button class="plus" onClick="onAddFormList()">+</button>
+                </div>
             </div>
             <div class="submit-btn-area">
                 <div class="btn-wrap">
