@@ -1,10 +1,19 @@
 #app{
     max-width: 400px;
     padding: 0 10px;
-    margin: 50px auto;
+    margin: 70px auto;
     color: #1b1b1b;
 }
 .create-link-area{}
+.create-link-area .ratio-input-wrap input{
+    width: 100%;
+    height: 40px;
+    line-height: 38px;
+    padding-left: 10px;
+    border: 1px solid #d9d9d9;
+    font-size: 16px;
+    font-weight: 400;
+}
 .create-link-area .link-wrap{
     margin: -20px 0 0;
 }

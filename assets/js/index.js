@@ -17,10 +17,10 @@ const onSubmit = () => {
     formLists.forEach((list, idx) => {
         const left = list.querySelector('input[name="left"]').value;
         const top = list.querySelector('input[name="top"]').value;
-        const imageWidth = 800;
+        const imageWidth = document.querySelector('.create-link-area .ratio-input-wrap input').value;
 
         const leftSum = left / imageWidth * 100;
-        const topSum = left / imageWidth * 100;
+        const topSum = top / imageWidth * 100;
 
         if (idx > 0) {
             linkText += '`';
@@ -76,7 +76,7 @@ const onSubmit = () => {
                 linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
             break;
             case '8' : 
-                url = "http://dearcus.co.kr/product/%EB%94%94%EC%96%B4%EC%BB%A4%EC%8A%A4-%EC%95%88%EB%85%95%ED%95%9C%EC%A7%80-%ED%95%9C%EC%A7%80-%EC%83%A4%EC%9B%8C%ED%83%80%EC%9B%94/95/category/43/display/1/";
+                url = "https://dearcus.co.kr/product/%EB%94%94%EC%96%B4%EC%BB%A4%EC%8A%A4-%EC%95%88%EB%85%95%ED%95%9C%EC%A7%80-%ED%95%9C%EC%A7%80-%EC%83%A4%EC%9B%8C%ED%83%80%EC%9B%94/95/category/43/display/1/";
                 title = "안녕한지 샤워타월";
                 text = "건조가 빨라 위생적인<br />한지로 만든 샤워타월";
                 linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
@@ -88,8 +88,8 @@ const onSubmit = () => {
                 linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
             break;
             case '10' : 
-                url = "http://dearcus.co.kr/product/%EB%94%94%EC%96%B4%EC%BB%A4%EC%8A%A4-%EB%AA%A9%EC%9A%95%EC%9D%BC-%EC%A0%84%EC%9E%90%EB%A0%88%EC%9D%B8%EC%A7%80-%ED%81%B4%EB%A6%AC%EB%84%88/104/category/43/display/1/";
-                title = "전자레인지 클리너";
+                url = "https://dearcus.co.kr/product/%EB%94%94%EC%96%B4%EC%BB%A4%EC%8A%A4-%EB%AA%A9%EC%9A%95%EC%9D%BC-%EC%A0%84%EC%9E%90%EB%A0%88%EC%9D%B8%EC%A7%80-%ED%81%B4%EB%A6%AC%EB%84%88/104/category/43/display/1/";
+                title = "목욕일 전자레인지 클리너";
                 text = "전자레인지 속 찌든 때와 악취를 제거해 주는 1분 간편 청소 시트";
                 linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
             break;
@@ -106,7 +106,7 @@ const onSubmit = () => {
                 linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
             break;
             case '13' : 
-                url = "http://dearcus.co.kr/product/%EB%94%94%EC%96%B4%EC%BB%A4%EC%8A%A4-%EC%98%AC%EB%B0%94%EB%A6%BC-%EC%8B%9C%ED%8A%B8%ED%98%95-%EC%84%B8%ED%83%81%EC%84%B8%EC%A0%9C/102/category/43/display/1/";
+                url = "https://dearcus.co.kr/product/%EB%94%94%EC%96%B4%EC%BB%A4%EC%8A%A4-%EC%98%AC%EB%B0%94%EB%A6%BC-%EC%8B%9C%ED%8A%B8%ED%98%95-%EC%84%B8%ED%83%81%EC%84%B8%EC%A0%9C/102/category/43/display/1/";
                 title = "시트형 세탁세제";
                 text = "찬물에도 잘 녹는<br />간편한 고농축 한 장 세제";
                 linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
@@ -115,6 +115,18 @@ const onSubmit = () => {
                 url = "https://dearcus.co.kr/product/%EB%94%94%EC%96%B4%EC%BB%A4%EC%8A%A4-%EC%98%AC%EB%B0%94%EB%A6%BC-%EC%8B%9C%ED%8A%B8%ED%98%95-%EC%84%B8%ED%83%81%EC%84%B8%EC%A0%9C/102/category/43/display/1/";
                 title = "올바림 시트세제";
                 text = "찬물에도 잘 녹는<br />간편한 고농축 한 장 세제";
+                linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
+            break;
+            case '15' : 
+                url = "https://dearcus.co.kr/product/도돌이-찌든때-클리너/110/category/43/display/1/";
+                title = "도돌이 찌든때 클리너";
+                text = "탄 냄비, 기름때, 인덕션 찌든때까지! <br />다용도 찌든때 클리너";
+                linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
+            break;
+            case '16' : 
+                url = "https://dearcus.co.kr/product/아무틈-제습제-걸이형-파우치/112/category/43/display/1/";
+                title = "아무틈 제습제";
+                text = "아무틈에나 쏙 들어가는 <br />젤리로 변하는 슬림 제습제";
                 linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
             break;
         }
@@ -134,3 +146,10 @@ const copyText = () => {
     document.execCommand("copy"); //복사
     sel.removeRange(range); //선택 정보 삭제
 }
+
+document.addEventListener('keydown', (e) => {
+    if(e.keyCode === 13){
+        onSubmit();
+        copyText();
+    }
+})
