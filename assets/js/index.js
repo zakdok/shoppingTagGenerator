@@ -129,6 +129,12 @@ const onSubmit = () => {
                 text = "아무틈에나 쏙 들어가는 <br />젤리로 변하는 슬림 제습제";
                 linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
             break;
+            case '17' : 
+                url = "https://dearcus.co.kr/product/%EB%84%A4%EB%B8%8C%EB%A6%AC%EC%8A%A4-%EC%B0%A8%EB%9F%89%EC%9A%A9-%EC%9E%90%EC%84%9D-%EC%B6%A9%EC%A0%84-%EA%B1%B0%EC%B9%98%EB%8C%80/122/category/43/display/1/";
+                title = "네브리스 차량용 자석 충전 거치대";
+                text = "모든 스마트폰 충전 가능한 차량용 자석 충전 거치대";
+                linkText += url + "?" + leftSum.toFixed(2) + '%?' + topSum.toFixed(2) + '%?' + '<h3>' + title + '</h3>' + text;
+            break;
         }
     })
 
